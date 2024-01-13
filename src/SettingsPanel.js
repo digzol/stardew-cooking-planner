@@ -35,7 +35,7 @@ function SettingsPanel(props) {
         onChange={handleShowCompletedRecipesChange}
         className="text-nowrap"
       />
-      <legend className="col-form-label">Enabled Recipes</legend>
+      <legend className="col-form-label">Enabled recipes</legend>
       <Form.Group className="ms-3">
         <Form.Check
           type="switch"
