@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.4a4af70d.css",
-    "main.js": "/static/js/main.49c22c75.js",
-    "static/media/item-sprites.png": "/static/media/item-sprites.83b877a5b7d25db27705.png",
-    "index.html": "/index.html",
-    "main.4a4af70d.css.map": "/static/css/main.4a4af70d.css.map",
-    "main.49c22c75.js.map": "/static/js/main.49c22c75.js.map"
+    "main.css": "/stardew-cooking-planner/static/css/main.7eca114b.css",
+    "main.js": "/stardew-cooking-planner/static/js/main.49c22c75.js",
+    "static/media/item-sprites.png": "/stardew-cooking-planner/static/media/item-sprites.83b877a5b7d25db27705.png",
+    "index.html": "/stardew-cooking-planner/index.html",
+    "main.7eca114b.css.map": "/stardew-cooking-planner/static/css/main.7eca114b.css.map",
+    "main.49c22c75.js.map": "/stardew-cooking-planner/static/js/main.49c22c75.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a4af70d.css",
+    "static/css/main.7eca114b.css",
     "static/js/main.49c22c75.js"
   ]
 }
