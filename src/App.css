@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+:root {
+  --background-primary-color: #535231;
+  --foreground-primary-color: #e0cfc2;
+
+  --header-primary-color: #313253;
+  --header-secondary-color: #2c2d4a;
+  --header-text-color: #acadba;
+  --header-text-color-active: #d5d6dc;
+  --header-text-color-hover: #9495a4;
+
+  --header-height: 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  background-color: var(--background-primary-color);
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  margin: 0 auto;
+  max-width: 800px;
+  padding-top: var(--header-height);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.data-list {
   display: flex;
   flex-direction: column;
+}
+
+.data-list .data-list-row {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--foreground-primary-color);
+  border: 1px solid var(--background-primary-color);
+  color: #191819;
+  padding-left: 20px;
+}
+
+.data-list .data-list-row .col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 15px 5px;
+}
+
+.data-list .data-list-row .recipe-col .form-check {
+  display: flex;
+  padding-left: 20px;
+}
+
+.data-list .data-list-row ul.ingredient-list {
+  flex-direction: row;
+  align-items: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.data-list .data-list-row ul.ingredient-list li {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style-type: none;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.sprite-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  margin: 2px 10px;
+  background-image: url("./assets/item-sprites.png");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-label {
+  display: flex;
+  align-items: center;
+}
+
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+}
+
+.icon-list .sprite-icon {
+  margin: 2px;
+}
+
+/* Bootstrap React */
+
+.form-check {
+  align-items: center;
+}
+
+/* Navbar styles */
+
+.nav {
+  background-color: var(--header-primary-color);
+  border-bottom: 1px solid var(--header-secondary-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.nav .dropdown-menu {
+  --bs-dropdown-color: var(--header-text-color-active);
+  --bs-dropdown-padding-x: 5px;
+  --bs-dropdown-padding-y: 5px;
+  --bs-dropdown-bg: #00000066;
+}
+
+.nav {
+  --bs-nav-underline-link-active-color: var(--header-text-color-active);
+  --bs-nav-link-color: var(--header-text-color);
+  --bs-nav-link-hover-color: var(--header-text-color-hover);
+}
+
+.form-check-input {
+  width: 2em;
+  height: 2em;
+  margin-right: 5px;
 }
