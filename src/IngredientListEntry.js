@@ -17,8 +17,8 @@ function IngredientListEntry(props) {
     <div className="col recipe-col">
       <Form.Check
         type="checkbox"
-        id={"ingredients."+props.name}
         label={label}
+        data-tag={props.name}
       />
     </div>
     <div className="col">

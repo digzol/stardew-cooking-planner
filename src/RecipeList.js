@@ -5,9 +5,9 @@ function RecipeList(props) {
   const listRows = [];
 
   const handleRecipeCompletion = ({target}) => {
-    const id = target.id;
+    const tag = target.dataset.tag;
     const newCompletedRecipes = {...props.completedRecipes};
-    newCompletedRecipes[id] = target.checked;
+    newCompletedRecipes[tag] = target.checked;
     props.onRecipeCompletedChange(newCompletedRecipes);
     UserData.setCompletedRecipes(newCompletedRecipes);
   }

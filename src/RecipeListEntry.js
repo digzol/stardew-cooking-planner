@@ -18,8 +18,8 @@ function RecipeListEntry(props) {
     <div className="col recipe-col">
       <Form.Check
         type="checkbox"
-        id={"recipes."+props.name}
         label={label}
+        data-tag={props.name}
         defaultChecked={props.isCompleted}
         onChange={props.onCompletion}
       />
