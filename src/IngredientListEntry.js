@@ -4,7 +4,7 @@ import SpriteIcon from "./SpriteIcon";
 function IngredientListEntry(props) {
   const label = (<span className="icon-label">
     <SpriteIcon name={props.name} />
-    {props.name + "(" + props.count + ")"}
+    {props.name + " (" + props.count + ")"}
   </span>);
 
   const recipes = props.recipes.map((value) => (

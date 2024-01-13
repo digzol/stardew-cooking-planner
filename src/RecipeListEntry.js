@@ -10,7 +10,7 @@ function RecipeListEntry(props) {
   const ingredients = props.ingredients.map((value) => (
     <li key={props.name+"."+value.name}>
       <SpriteIcon name={value.name} />
-      {value.name + "(" + value.count + ")"}
+      {value.name + " (" + value.count + ")"}
     </li>
   ));
 
