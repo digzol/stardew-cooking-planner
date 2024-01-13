@@ -26,16 +26,17 @@ function SettingsPanel(props) {
   };
 
   return (
-    <Form>
-      <Form.Group>
-        <Form.Check
-          type="switch"
-          id="show-completed-recipes"
-          label="Show completed recipes"
-          defaultChecked={props.settings.showCompletedRecipes}
-          onChange={handleShowCompletedRecipesChange}
-        />
-        <Form.Label>Enabled Recipes</Form.Label>
+    <Form className="mx-3 mb-0">
+      <Form.Check
+        type="switch"
+        id="show-completed-recipes"
+        label="Show completed recipes"
+        defaultChecked={props.settings.showCompletedRecipes}
+        onChange={handleShowCompletedRecipesChange}
+        className="text-nowrap"
+      />
+      <legend className="col-form-label">Enabled Recipes</legend>
+      <Form.Group className="ms-3">
         <Form.Check
           type="switch"
           id="toggle-vanilla-recipes"

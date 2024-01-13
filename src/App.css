@@ -108,8 +108,6 @@ body {
 
 .nav .dropdown-menu {
   --bs-dropdown-color: var(--header-text-color-active);
-  --bs-dropdown-padding-x: 5px;
-  --bs-dropdown-padding-y: 5px;
   --bs-dropdown-bg: #00000066;
 }
 
