@@ -14,7 +14,7 @@ function RecipeList(props) {
 
   for (let recipes of props.recipes) {
     for (let recipeID in recipes) {
-      if (!props.completedRecipes[recipeID]) {
+      if (UserData.showCompletedRecipes || !props.completedRecipes[recipeID]) {
         const data = recipes[recipeID];
         const isCompleted = props.completedRecipes[recipeID] != null ? props.completedRecipes[recipeID] : false;
         listRows.push(<RecipeListEntry

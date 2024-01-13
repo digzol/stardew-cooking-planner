@@ -17,10 +17,25 @@ function SettingsPanel(props) {
     });
   };
 
+  const handleShowCompletedRecipesChange = () => {
+    props.settings.setShowCompletedRecipes((prevState) => {
+      const newState = !prevState;
+      UserData.setShowCompletedRecipes(newState);
+      return newState;
+    })
+  };
+
   return (
     <Form>
       <Form.Group>
-        <Form.Label>Recipes</Form.Label>
+        <Form.Check
+          type="switch"
+          id="show-completed-recipes"
+          label="Show completed recipes"
+          defaultChecked={props.settings.showCompletedRecipes}
+          onChange={handleShowCompletedRecipesChange}
+        />
+        <Form.Label>Enabled Recipes</Form.Label>
         <Form.Check
           type="switch"
           id="toggle-vanilla-recipes"

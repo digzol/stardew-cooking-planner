@@ -30,6 +30,7 @@ function GetActiveRecipes() {
 function App() {
   const [activeRecipes, setActiveRecipes] = useState(GetActiveRecipes());
   const [completedRecipes, setCompletedRecipes] = useState(UserData.completedRecipes);
+  const [showCompletedRecipes, setShowCompletedRecipes] = useState(UserData.showCompletedRecipes);
 
   const handleUpdatedActiveRecipes = () => { setActiveRecipes(GetActiveRecipes()); };
   const handleRecipeCompletedChange = (completedRecipes) => { setCompletedRecipes(completedRecipes); };
@@ -46,6 +47,10 @@ function App() {
           </Nav.Item>
           <NavDropdown title="Settings">
             <SettingsPanel
+              settings={{
+                showCompletedRecipes: showCompletedRecipes,
+                setShowCompletedRecipes: setShowCompletedRecipes,
+              }}
               OnEnabledRecipesChange={handleUpdatedActiveRecipes}
             />
           </NavDropdown>
@@ -55,6 +60,7 @@ function App() {
             <RecipeList
               recipes={activeRecipes}
               completedRecipes={completedRecipes}
+              showCompletedRecipes={showCompletedRecipes}
               onRecipeCompletedChange={handleRecipeCompletedChange}
             />
           </Tab.Pane>
