@@ -30,14 +30,14 @@ function SettingsPanel(props) {
         />
         <Form.Check
           type="switch"
-          id="toggle-vanilla-recipes"
+          id="toggle-SVE-recipes"
           label="SVE recipes"
           defaultChecked={enabledRecipes.SVERecipes}
           onChange={() => toggleRecipe("SVERecipes")}
         />
         <Form.Check
           type="switch"
-          id="toggle-vanilla-recipes"
+          id="toggle-RSV-recipes"
           label="RSV recipes"
           defaultChecked={enabledRecipes.RSVRecipes}
           onChange={() => toggleRecipe("RSVRecipes")}
