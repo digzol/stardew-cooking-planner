@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/stardew-cooking-planner/static/css/main.7eca114b.css",
+    "main.css": "/stardew-cooking-planner/static/css/main.541fb43d.css",
     "main.js": "/stardew-cooking-planner/static/js/main.49c22c75.js",
     "static/media/item-sprites.png": "/stardew-cooking-planner/static/media/item-sprites.83b877a5b7d25db27705.png",
     "index.html": "/stardew-cooking-planner/index.html",
-    "main.7eca114b.css.map": "/stardew-cooking-planner/static/css/main.7eca114b.css.map",
+    "main.541fb43d.css.map": "/stardew-cooking-planner/static/css/main.541fb43d.css.map",
     "main.49c22c75.js.map": "/stardew-cooking-planner/static/js/main.49c22c75.js.map"
   },
   "entrypoints": [
-    "static/css/main.7eca114b.css",
+    "static/css/main.541fb43d.css",
     "static/js/main.49c22c75.js"
   ]
 }
