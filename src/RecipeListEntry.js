@@ -20,6 +20,7 @@ function RecipeListEntry(props) {
       <Form.Check
         type="checkbox"
         label={label}
+        id={"recipes."+props.name}
         data-tag={props.name}
         defaultChecked={props.isCompleted}
         onChange={props.onCompletion}
