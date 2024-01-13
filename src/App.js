@@ -17,12 +17,12 @@ function GetActiveRecipes() {
   const recipes = [];
   if (UserData.enabledRecipes.vanillaRecipes) {
     recipes.push(Recipes);
-    if (UserData.enabledRecipes.SVERecipes) {
-      recipes.push(RecipesSVE);
-    }
-    if (UserData.enabledRecipes.RSVRecipes) {
-      recipes.push(RecipesRSV);
-    }
+  }
+  if (UserData.enabledRecipes.SVERecipes) {
+    recipes.push(RecipesSVE);
+  }
+  if (UserData.enabledRecipes.RSVRecipes) {
+    recipes.push(RecipesRSV);
   }
   return recipes;
 }
