@@ -119,7 +119,7 @@ body {
   --bs-nav-link-hover-color: var(--header-text-color-hover);
 }
 
-.form-check-input {
+.recipe-col .form-check-input {
   width: 2em;
   height: 2em;
   margin-right: 5px;
