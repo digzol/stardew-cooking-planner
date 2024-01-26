@@ -208,7 +208,7 @@ export default {
   },
   "Pink Frosted Sprinkled Doughnut": {
     "ingredients": [
-      { "name": "Sugar", "count": 1 },
+      { "name": "Sugar", "count": 5 },
       { "name": "Wheat Flour", "count": 1 },
       { "name": "Strawberry", "count": 1 },
       { "name": "Highland Jostaberry", "count": 1 },
