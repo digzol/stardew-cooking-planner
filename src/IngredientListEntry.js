@@ -21,6 +21,8 @@ function IngredientListEntry(props) {
         label={label}
         id={"ingredients."+props.name}
         data-tag={props.name}
+        defaultChecked={props.isCompleted}
+        onChange={props.onCompletion}
       />
     </div>
     <div className="col">

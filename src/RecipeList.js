@@ -18,11 +18,11 @@ function RecipeList(props) {
         const data = recipes[recipeID];
         const isCompleted = props.completedRecipes[recipeID] != null ? props.completedRecipes[recipeID] : false;
         listRows.push(<RecipeListEntry
-          key={recipeID}
-          name={recipeID}
-          ingredients={data.ingredients}
-          isCompleted={isCompleted}
-          onCompletion={handleRecipeCompletion}
+          key = {recipeID}
+          name = {recipeID}
+          ingredients = {data.ingredients}
+          isCompleted = {isCompleted}
+          onCompletion = {handleRecipeCompletion}
         />);
       }
     }

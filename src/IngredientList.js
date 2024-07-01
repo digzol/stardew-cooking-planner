@@ -1,8 +1,17 @@
 import IngredientListEntry from "./IngredientListEntry";
+import UserData from "./UserData";
 
 function IngredientList(props) {
   const ingredientList = [];
   const listRows = [];
+
+  const handleIngredientCompletion = ({target}) => {
+    const tag = target.dataset.tag;
+    const newCompletedIngredients = {...props.completedIngredients};
+    newCompletedIngredients[tag] = target.checked;
+    props.onIngredientCompletedChange(newCompletedIngredients);
+    UserData.setCompletedIngredients(newCompletedIngredients);
+  }
 
   // Search and return a recipe in all enabled collections
   function GetRecipe(recipeID) {
@@ -51,13 +60,19 @@ function IngredientList(props) {
   }
 
   for (let ingredientID in ingredientList) {
-    const data = ingredientList[ingredientID];
-    listRows.push(<IngredientListEntry
-      key = {ingredientID}
-      name = {ingredientID}
-      count = {data.count}
-      recipes = {data.recipes}
-    />);
+    if (UserData.showCompletedRecipes || !props.completedIngredients[ingredientID])
+    {
+      const data = ingredientList[ingredientID];
+      const isCompleted = props.completedIngredients[ingredientID] != null ? props.completedIngredients[ingredientID] : false;
+      listRows.push(<IngredientListEntry
+        key = {ingredientID}
+        name = {ingredientID}
+        count = {data.count}
+        recipes = {data.recipes}
+        isCompleted = {isCompleted}
+        onCompletion = {handleIngredientCompletion}
+      />);
+    }
   }
 
   return (<div className="data-list">{listRows}</div>);

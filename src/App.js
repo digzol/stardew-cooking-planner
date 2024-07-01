@@ -28,12 +28,14 @@ function GetActiveRecipes() {
 }
 
 function App() {
+  const [showCompletedRecipes, setShowCompletedRecipes] = useState(UserData.showCompletedRecipes);
   const [activeRecipes, setActiveRecipes] = useState(GetActiveRecipes());
   const [completedRecipes, setCompletedRecipes] = useState(UserData.completedRecipes);
-  const [showCompletedRecipes, setShowCompletedRecipes] = useState(UserData.showCompletedRecipes);
+  const [completedIngredients, setCompletedIngredients] = useState(UserData.completedIngredients);
 
   const handleUpdatedActiveRecipes = () => { setActiveRecipes(GetActiveRecipes()); };
   const handleRecipeCompletedChange = (completedRecipes) => { setCompletedRecipes(completedRecipes); };
+  const handleIngredientCompletedChange = (completedIngredients) => { setCompletedIngredients(completedIngredients); };
 
   return (
     <div className="app">
@@ -68,6 +70,9 @@ function App() {
             <IngredientList
               recipes={activeRecipes}
               completedRecipes={completedRecipes}
+              completedIngredients={completedIngredients}
+              showCompletedRecipes={showCompletedRecipes}
+              onIngredientCompletedChange={handleIngredientCompletedChange}
             />
           </Tab.Pane>
         </Tab.Content>
